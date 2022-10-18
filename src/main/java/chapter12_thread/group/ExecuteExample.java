@@ -48,7 +48,6 @@ public class ExecuteExample {
             };
 //            executorService.execute(runnable);  // 작업 처리 요청
              executorService.submit(runnable);
-
             Thread.sleep(10);
         }
         executorService.shutdown(); //   스레드풀 종료

@@ -6,8 +6,8 @@ public class Test {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         // create thread pool
         ExecutorService executorService = Executors.newFixedThreadPool(2);
-
         for (int i = 0; i < 100; i++) {
+            // callable
             Callable<String> callable = new Callable<>() {
                 @Override
                 public String call() throws Exception {
@@ -32,7 +32,5 @@ public class Test {
             String s = submit.get();
             System.out.println("name : " + s);
         }
-
-
     }
 }
